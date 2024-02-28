@@ -12,7 +12,7 @@ interface Props {
     conversationId?: string;
 }
 
-export const QuestionInput = ({ onSend, disabled, placeholder, clearOnSend, conversationId }: Props) => {
+export const QuestionInput = ({ onSend, disabled, "Hello", clearOnSend, conversationId }: Props) => {
     const [question, setQuestion] = useState<string>("");
 
     const sendQuestion = () => {
