@@ -25,11 +25,11 @@ from backend.utils import format_as_ndjson, format_stream_response, generateFilt
 bp = Blueprint("routes", __name__, static_folder="static", template_folder="static")
 
 # UI configuration (optional)
-UI_TITLE = os.environ.get("UI_TITLE") or "Contoso"
+UI_TITLE = os.environ.get("UI_TITLE") or "LinkedIn Post Generator For GMB Members"
 UI_LOGO = os.environ.get("UI_LOGO")
 UI_CHAT_LOGO = os.environ.get("UI_CHAT_LOGO")
-UI_CHAT_TITLE = os.environ.get("UI_CHAT_TITLE") or "Start chatting"
-UI_CHAT_DESCRIPTION = os.environ.get("UI_CHAT_DESCRIPTION") or "This chatbot is configured to answer your questions"
+UI_CHAT_TITLE = os.environ.get("UI_CHAT_TITLE") or "Hello!"
+UI_CHAT_DESCRIPTION = os.environ.get("UI_CHAT_DESCRIPTION") or "Please share content, announcements, news, or press releases. I'll craft LinkedIn posts tailored to each GMB member."
 UI_FAVICON = os.environ.get("UI_FAVICON") or "/favicon.ico"
 UI_SHOW_SHARE_BUTTON = os.environ.get("UI_SHOW_SHARE_BUTTON", "true").lower() == "true"
 
@@ -249,6 +249,7 @@ def init_openai_client(use_data=SHOULD_USE_DATA):
                 api_key=aoai_api_key,
                 azure_ad_token_provider=ad_token_provider,
                 default_headers=default_headers,
+                timeout=120.0, max_retries=4,
             )
         else:
             azure_openai_client = AsyncAzureOpenAI(
@@ -256,7 +257,8 @@ def init_openai_client(use_data=SHOULD_USE_DATA):
                 api_key=aoai_api_key,
                 azure_ad_token_provider=ad_token_provider,
                 default_headers=default_headers,
-                azure_endpoint=endpoint
+                azure_endpoint=endpoint,
+                timeout=120.0, max_retries=4
             )
         return azure_openai_client
     except Exception as e:
