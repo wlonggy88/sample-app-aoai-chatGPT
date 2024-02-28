@@ -272,14 +272,14 @@ html {
 ._chatMessageUserMessage_n5nsr_85 {
     display: flex;
     padding: 20px;
-    background: #EDF5FD;
+    background: #b63443;
     border-radius: 8px;
     box-shadow: 0 2px 4px #00000024,0 0 2px #0000001f;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
-    color: #242424;
+    color: #ffffff;
     order: 0;
     flex-grow: 0;
     white-space: pre-wrap;
