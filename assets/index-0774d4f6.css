@@ -10,7 +10,7 @@ html,body {
 
 html {
     background: #f2f2f2;
-    font-family: arial;
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale
 }
@@ -67,7 +67,7 @@ html {
     gap: 4px;
     width: 86px;
     height: 32px;
-    background: radial-gradient(109.81% 107.82% at 100.1% 90.19%,#0F6CBD 33.63%,#2D87C3 70.31%,#8DDDD8 100%);
+    background: radial-gradient(109.81% 107.82% at 100.1% 90.19%,#9E3039 33.63%,#C60C30 70.31%,#E98300 100%);
     border-radius: 4px;
     flex: none;
     order: 1;
@@ -147,13 +147,13 @@ html {
     width: 86px;
     height: 32px;
     border-radius: 4px;
-    background: radial-gradient(109.81% 107.82% at 100.1% 90.19%,#0F6CBD 33.63%,#2D87C3 70.31%,#8DDDD8 100%);
+    background: radial-gradient(109.81% 107.82% at 100.1% 90.19%,#9E3039 33.63%,#C60C30 70.31%,#E98300 100%);
     padding: 5px 12px;
     margin-right: 20px
 }
 
 ._shareButtonRoot_1x77s_1:hover {
-    background: linear-gradient(135deg,#0F6CBD 0%,#2D87C3 51.04%,#8DDDD8 100%)
+    background: linear-gradient(135deg,#9E3039 0%,#C60C30 51.04%,#E98300 100%)
 }
 
 ._shareButtonRoot_1x77s_1 span {
